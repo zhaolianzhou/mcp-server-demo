@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mcp-server-demo"
+version = "0.1.0"
+description = ""
+authors = ["Zhaolian Zhou <zhaolianzhou92@gmail.com>"]
+
+packages = [
+    { include = "OAuth", from = "src" },
+    { include = "src"}
+]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+fastapi = ">=0.124.4,<0.125.0"
+klavis = ">=2.18.0,<3.0.0"
+litellm = ">=1.80.10,<2.0.0"
+uvicorn = ">=0.38.0,<0.39.0"
+pydantic = "^2.12.5"
+openai = "^2.13.0"
+google-auth-oauthlib = "^1.2.3"
+google-api-python-client = "^2.187.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

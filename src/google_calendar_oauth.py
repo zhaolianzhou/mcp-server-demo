@@ -236,6 +236,8 @@ async def success(state: str):
     mcp_config = sessions[state]['mcp_config']
     config_json = json.dumps(mcp_config, indent=2)
     auth_env_config = sessions[state]['auth_env_config']
+    auth_env_json = json.dumps(auth_env_config)
+
 
     return f"""
     <!DOCTYPE html>
@@ -347,7 +349,7 @@ async def success(state: str):
                 </div>
                 <div class="code-block">
                     <button class="copy-btn" onclick="copyConfig()">📋 Copy</button>
-                    <pre id="config">{auth_env_config}</pre>
+                    <pre id="config">{auth_env_json}</pre>
                 </div>
             </div>
             

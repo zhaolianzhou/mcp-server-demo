@@ -5,7 +5,6 @@ description = ""
 authors = ["Zhaolian Zhou <zhaolianzhou92@gmail.com>"]
 
 packages = [
-    { include = "OAuth", from = "src" },
     { include = "src"}
 ]
 readme = "README.md"

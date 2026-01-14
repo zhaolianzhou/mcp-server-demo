@@ -23,6 +23,7 @@ google-api-python-client = "^2.187.0"
 requests = "^2.32.5"
 gh = "^0.0.4"
 itsdangerous = "^2.2.0"
+mcp = "^1.25.0"
 
 
 [build-system]

@@ -10,6 +10,7 @@ from src import google_calendar_oauth
 from src import github_oauth
 from src import figma_oauth
 from src import atlassian_oauth
+from src import slack_oauth
 from src.clients import klavis_client, PLATFORM_NAME, openai_client
 
 # ---- Replace this with your real persistence layer (DB/Redis/DynamoDB/etc.) ----
@@ -22,6 +23,8 @@ app.include_router(google_calendar_oauth.router, prefix="/google")
 app.include_router(github_oauth.router, prefix="/github")
 app.include_router(figma_oauth.router, prefix="/figma")
 app.include_router(atlassian_oauth.router, prefix="/atlassian")
+
+app.include_router(slack_oauth.router, prefix="/slack")
 
 
 class ConnectRequest(BaseModel):
